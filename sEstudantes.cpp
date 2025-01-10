@@ -32,39 +32,32 @@ void mostrarAlunos(aluno alunos[],int alunoo){
 }
 
 
-int main(){
-
+int main() {
     int alunoo = 0;
     aluno maxAlunos[20];
     int escolha;
-    cin >> escolha;
 
+    do {
+        cout << "Menu de Opções:" << endl;
+        cout << "1. Adicionar aluno" << endl;
+        cout << "2. Mostrar alunos" << endl;
+        cout << "3. Sair" << endl;
+        cin >> escolha;
 
-    do
-    {
+        switch (escolha) {
+            case 1:
+                adicionarAluno(maxAlunos, alunoo);
+                break;
+            case 2:
+                mostrarAlunos(maxAlunos, alunoo);
+                break;
+            case 3:
+                cout << "Saindo do programa..." << endl;
+                break;
+            default:
+                cout << "Opção inválida! Tente novamente." << endl;
+        }
+    } while (escolha != 3);
 
-    cout << "1.adicionar alunos" << endl;
-    cout << "2.mostrar alunos" << endl;
-    
-
-    switch (escolha)
-    {
-    case 1:
-        adicionarAluno(maxAlunos, alunoo);
-
-        break;
-    case 2: 
-        mostrarAlunos(maxAlunos, alunoo);
-
-        break;
-    
-    default:
-        cout << "escolha outra opcao" << endl;
-        break;
-    }
-
-
-} while (escolha != 2);
-
-
+    return 0;
 }
