@@ -17,6 +17,7 @@ void adicionarAluno(aluno alunos[], int& alunoo){
     cin >> alunos[alunoo].idade;
     cout << "Nota: ";
     cin >> alunos[alunoo].nota;
+    alunoo++;
 
 }
 
